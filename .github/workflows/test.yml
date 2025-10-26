@@ -21,7 +21,9 @@ jobs:
         uses: foundry-rs/foundry-toolchain@v1
 
       - name: Install dependencies
-        run: forge install
+        run: |
+          git submodule update --init --recursive
+          forge install --no-commit
 
       - name: Show Forge version
         run: |
