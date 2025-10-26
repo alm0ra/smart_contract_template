@@ -22,8 +22,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          git submodule update --init --recursive
-          forge install --no-commit
+          forge install OpenZeppelin/openzeppelin-contracts@v4.9.5
+          forge install foundry-rs/forge-std
 
       - name: Show Forge version
         run: |
